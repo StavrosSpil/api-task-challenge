@@ -1,12 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ( { loggedInUser, setLoggedInUser } ) => {
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        setLoggedInUser(null)
+        navigate('/login');
+    }
     return (
         <nav>
-           <Link to='/'>Home</Link>
-           <Link to='/login'>Login</Link>
-           <Link to='/register'>Register</Link>
-           <Link to='/login'>Sign Out</Link>
+           {loggedInUser &&<Link to='/'>Home</Link>}
+           {loggedInUser &&<a onClick={() => handleSignOut()}href='#'>Sign Out</a>}
+           {!loggedInUser &&<Link to='/login'>Login</Link>}
+           {!loggedInUser &&<Link to='/register'>Register</Link>}  
         </nav>
     )
 }

@@ -9,17 +9,21 @@ import CreateTask from "./components/CreateTask";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Dashboard from "./components/Dashboard";
+import { useState } from "react";
 
 
 function App() {
 
+  const [loggedInUser, setLoggedInUser] = useState(null)
+  console.log(loggedInUser);
+
   return ( 
-    <>
-      <Navbar />
+<>
+      <Navbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
       <main>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<Login setLoggedInUser={setLoggedInUser}/>} />
         <Route path='/register' element={<Register />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/createTask' element={<CreateTask />} />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-const Login = () => {
+const Login = ( {setLoggedInUser} ) => {
     const [username, setUsername] = useState('');
     const [password, setPass] = useState('');
     const [users, setUsers] = useState([]);
@@ -25,6 +25,7 @@ const Login = () => {
                         username: users[i].username,
                     }
                     console.log("Correct credentials");
+                    setLoggedInUser(user);
                     navigate("/dashboard", {state: user});
                     return;
                 } 
