@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/api-task-challenge/api-task-challenge/bin/Debug/net7.0/appsettings.json
+/api-task-challenge/api-task-challenge/appsettings.json

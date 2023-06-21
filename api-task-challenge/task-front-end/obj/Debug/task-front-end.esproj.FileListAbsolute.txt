@@ -1,0 +1,4 @@
+C:\Users\Spili\source\repos\api-task-challenge\api-task-challenge\task-front-end\obj\Debug\task-front-end.esproj.SuggestedBindingRedirects.cache
+C:\Users\Spili\source\repos\api-task-challenge\api-task-challenge\task-front-end\obj\Debug\task-front-end.esproj.CoreCompileInputs.cache
+C:\Users\Spili\final-project\api-task-challenge\api-task-challenge\task-front-end\obj\Debug\task-front-end.esproj.SuggestedBindingRedirects.cache
+C:\Users\Spili\final-project\api-task-challenge\api-task-challenge\task-front-end\obj\Debug\task-front-end.esproj.CoreCompileInputs.cache
