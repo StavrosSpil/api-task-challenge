@@ -31,6 +31,7 @@ const Register = (props) => {
                 console.log(res.data);
             });
             navigate('/login');
+            return;
         } else {
             for (var i = 0; i < users.length; i++) {
                 if (users[i].username === username) {
@@ -53,7 +54,7 @@ const Register = (props) => {
             console.log(users)
             navigate('/login');
         } else {
-            alert("Wrong credentials");
+            alert("User already exists");
             setUsername('');
             setEmail('');
             setPassword('');

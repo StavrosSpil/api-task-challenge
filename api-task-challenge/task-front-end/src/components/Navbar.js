@@ -9,8 +9,8 @@ const Navbar = ( { loggedInUser, setLoggedInUser } ) => {
     }
     return (
         <nav>
-           {loggedInUser &&<Link to='/'>Home</Link>}
-           {loggedInUser &&<a onClick={() => handleSignOut()}href='#'>Sign Out</a>}
+           {!loggedInUser &&<Link to='/'>Home</Link>}
+           {loggedInUser &&<a onClick={() => handleSignOut()}href=''>Sign Out</a>}
            {!loggedInUser &&<Link to='/login'>Login</Link>}
            {!loggedInUser &&<Link to='/register'>Register</Link>}  
         </nav>
